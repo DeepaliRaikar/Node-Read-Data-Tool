@@ -81,7 +81,7 @@ sheet_name_list.forEach(function(worksheet_name) {
           cell_data_list.forEach(function(el){
             formatted_cell_data_list += "<li>"+el.trim()+"</li>";
           });
-          formatted_cell_data_list = "<ul>"+formatted_cell_data_list;
+          formatted_cell_data_list = formatted_cell_data_list;
           formatted_cell_data_list = formatted_cell_data_list.replace(/&#x000d;&#x000a;/g, "<br/>");
           formatted_cell_data_list = formatted_cell_data_list.replace(/<br\/><\/li>/g, "</li>");
 
@@ -91,14 +91,13 @@ sheet_name_list.forEach(function(worksheet_name) {
             // console.log(formatted_cell_data_list+"\r\n\r\n");
           }
           if(formatted_cell_data_list.includes('<span style=\"text-decoration: underline;font-size:10pt;\"></li>')){
-            console.log("enterd");
             formatted_cell_data_list = formatted_cell_data_list.replace('<span style=\"text-decoration: underline;font-size:10pt;\"></li>', "</li><span style=\"text-decoration: underline;\">");
             // formatted_cell_data_list = formatted_cell_data_list.replace("<br/>", "</li></ul>");
             // formatted_cell_data_list = formatted_cell_data_list.replace(new RegExp("</li></ul>"+'$'), "");
           }
 
           formatted_cell_data_list = formatted_cell_data_list.replace(/<\/li>(?!.*<\/li>)/, '</li>');
-          formatted_cell_data_list = formatted_cell_data_list + "</ul>";
+          formatted_cell_data_list = formatted_cell_data_list;
           // if(formatted_cell_data_list.includes("font-size:10;")){
           //   formatted_cell_data_list = formatted_cell_data_list.replace(/ style="font-size:10;"/g,"");
           // }
