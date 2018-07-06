@@ -1,0 +1,256 @@
+@import "../../shell/css/partials/variables";
+
+.dnd_m ~ .lastdiv {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 7.2%;
+  bottom: 0;
+  z-index: 10;
+}
+
+.dnd_m ~ .que_text {
+  height: 121px;
+  width: 523px;
+  // margin: 1.5% auto 0;
+  border-radius: 100px;
+  box-shadow: 2px 2px 20px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  position: absolute;
+  top: 49.6%;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: top center;
+  margin-top: -14%;
+  .text_data {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 45px;
+    padding-top: 6%;
+    font-family: $vag-rounded-regular;
+    color: black;
+  }
+}
+
+.dnd_m {
+  position: absolute;
+  height: 716px;
+  width: 1495px;
+  left: 50%;
+  bottom: 6.5%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform-origin: bottom;
+  -ms-transform-origin: bottom;
+  -moz-transform-origin: bottom;
+  -webkit-transform-origin: bottom;
+
+  .dropped {
+    height: 100px !important;
+    width: 72px !important;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .draggables {
+    /* cursor: pointer;
+      bottom: 0px; */
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+    -ms-touch-action: none;
+    touch-action: none;
+  }
+
+  .image_container {
+    height: 59%;
+    width: 100%;
+    top: 21%;
+    position: absolute;
+
+    .draggableParent {
+      position: absolute;
+    }
+  }
+
+  .basket_back {
+    background-image: url("../../../courses/level_1/unit_2/week_2/speaking/screen_4/assets/images/basket_back.png");
+    width: 467px;
+    height: 136px;
+    position: absolute;
+    background-size: 100% 100%;
+    z-index: -1;
+  }
+
+  .basket_front {
+    background-image: url("../../../courses/level_1/unit_2/week_2/speaking/screen_4/assets/images/basket_front.png");
+    width: 467px;
+    height: 136px;
+    position: absolute;
+    background-size: 100% 100%;
+    z-index: 99;
+  }
+
+  .dummyDroppable {
+    position: absolute;
+    bottom: 4%;
+    width: 62%;
+    height: 75%;
+    text-align: center;
+
+    .draggables.dropped {
+      position: static;
+      display: inline-block;
+    }
+    /* :nth-child(1){
+        left: 4% !important;
+      }
+      :nth-child(2){
+        left: 33% !important;
+      }
+      :nth-child(3){
+        left: 60% !important;
+      } */
+  }
+  /* #draggableLeft_1{
+      height: 159px;
+      width: 159px;
+      position: absolute;
+      left: 33%;
+    }
+    #draggableLeft_2{
+      height: 170px;
+      width: 182px;
+      position: absolute;
+      bottom: 0;
+    }
+    #draggableLeft_3{
+      height: 233px;
+      width: 245px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    #leftImg_1{
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 159px;
+      width: 159px;
+      position: absolute;
+    }
+    #leftImg_2{
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 170px;
+      width: 182px;
+      position: absolute;
+    }
+    #leftImg_3{
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 233px;
+      width: 245px;
+      position: absolute;
+    } */
+  .left_box {
+    position: absolute;
+    height: 25%;
+    width: 50%;
+    left: 0;
+    bottom: 0;
+    transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    -moz-transform-origin: bottom;
+    -webkit-transform-origin: bottom;
+
+    #left_basket {
+      position: absolute;
+      width: 428px;
+      height: 136px;
+      bottom: 0;
+      left: 20%;
+    }
+
+    #left_dummy {
+      left: 20%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+  /* #draggableRight_1{
+      height: 210px;
+      width: 161px;
+      position: absolute;
+      left: 37%;
+    }
+    #draggableRight_2{
+      height: 134px;
+      width: 163px;
+      position: absolute;
+      bottom: 0;
+      left: 15%;
+    }
+    #draggableRight_3{
+      height: 165px;
+      width: 181px;
+      position: absolute;
+      bottom: 18%;
+      right: 0;
+    }
+    #rightImg_1{
+        //background-image:url("../../../courses/level_1/unit_2/week_2/speaking/screen_4/assets/images/book.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 210px;
+        width: 161px;
+        position: absolute;
+    }
+    #rightImg_2{
+        //background-image:url("../../../courses/level_1/unit_2/week_2/speaking/screen_4/assets/images/pencil.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 134px;
+        width: 163px;
+        position: absolute;
+    }
+    #rightImg_3{
+        //background-image:url("../../../courses/level_1/unit_2/week_2/speaking/screen_4/assets/images/box.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 165px;
+        width: 181px;
+        position: absolute;
+    } */
+  .right_box {
+    position: absolute;
+    height: 25%;
+    width: 50%;
+    right: 0;
+    bottom: 0;
+    transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    -moz-transform-origin: bottom;
+    -webkit-transform-origin: bottom;
+
+    #right_basket {
+      position: absolute;
+      width: 428px;
+      height: 136px;
+      bottom: 0;
+      right: 20%;
+    }
+
+    #right_dummy {
+      right: 15%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+}
